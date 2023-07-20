@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="MAUIMultiPage.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:MAUIMultiPage"
+    Shell.FlyoutBehavior="Disabled">
+
+    <TabBar>
+        <ShellContent
+        x:Name="homepage"
+        Title="Home"
+         />
+        <ShellContent
+        x:Name="specialOpsPage"
+        Title="Special Ops"
+         />
+
+    </TabBar>
+
+</Shell>
