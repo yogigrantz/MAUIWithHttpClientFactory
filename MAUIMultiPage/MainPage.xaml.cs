@@ -11,7 +11,7 @@ public partial class MainPage : ContentPage
         this._httpClientFactory = httpClientFactory;
     }
 
-	private void OnCounterClicked(object sender, EventArgs e)
+	private async void OnCounterClicked(object sender, EventArgs e)
 	{
 		count++;
 
@@ -21,6 +21,11 @@ public partial class MainPage : ContentPage
 			CounterBtn.Text = $"Clicked {count} times";
 
 		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+
+
+        var httpClient = _httpClientFactory.CreateClient();
+        var result = await httpClient.GetAsync("https://dummy.restapiexample.com/api/v1/employees");
+        txtResult.Text = await result.Content.ReadAsStringAsync();
+    }
 }
 

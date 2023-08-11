@@ -2,10 +2,10 @@
 
 public partial class App : Application
 {
-	public App(PageCollection pc)
+	public App(IHttpClientFactory httpClientFactory)
 	{
 		InitializeComponent();
 
-		MainPage = new AppShell(pc);
+		MainPage = new AppShell(httpClientFactory);
 	}
 }
