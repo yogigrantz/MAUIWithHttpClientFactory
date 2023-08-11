@@ -35,6 +35,8 @@
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
 
+            <Label x:Name="txtResult" MaximumWidthRequest="800" />
+
         </VerticalStackLayout>
     </ScrollView>
 
